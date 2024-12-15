@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      transition: background-color 0.3s ease;
+    }
+    .dropdown-container {
+      text-align: center;
+    }
+    .dropdown-container select {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown-container">
+    <label for="colorDropdown">Choose Background Color:</label>
+    <select id="colorDropdown">
+      <option value="#f5f5f5">Default</option>
+      <option value="#FF5733">Red</option>
+      <option value="#33FF57">Green</option>
+      <option value="#3357FF">Blue</option>
+      <option value="#FF33A1">Pink</option>
+    </select>
+  </div>
+
+  <script>
+    document.getElementById('colorDropdown').addEventListener('change', function() {
+      const selectedColor = this.value;
+      document.body.style.backgroundColor = selectedColor;
+    });
+  </script>
+</body>
+</html>
